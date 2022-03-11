@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+p,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    width: 100%;
+    height: 100%;
+    background-image:url(../images/mercedes-amg-w12-750x410.jpeg);
+    background-size: cover;
+    background-attachment:fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 0 0 20px 0;
+    color: #fafafa;
+}
+
+.cards-container {
+    width: 976px;
+    min-height: 680px;
+    padding: 32px;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.cards-container .card {
+    height: 125px;
+    width: 125px;
+    background: rgb(154, 107, 5);
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+.cards-container .card.open,
+.cards-container .card.match,
+.cards-container .card.error {
+    cursor: default;
+    font-size: 33px;
+}
+.cards-container .card.open {
+    transform: rotateY(0);
+    background: #cbf196;
+    pointer-events: none;
+}
+.cards-container .card.match,
+.cards-container .card.error {
+    pointer-events: none;
+}
+
+.cards-container .card.match {
+    background: #02ccba;
+}
+.cards-container .card.error {
+    background: #fc7373;
+}
